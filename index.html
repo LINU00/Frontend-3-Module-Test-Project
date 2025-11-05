@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CoinGecko</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Top 10 Coins — CoinGecko Markets</h1>
+
+  <div class="bar">
+    <input id="searchInput" class="search" placeholder="Search By Name or Symbol" />
+    <button id="sortCapBtn" class="btn">Sort By Mkt Cap</button>
+    <button id="sortPctBtn" class="btn">Sort by % Change</button>
+  </div>
+
+  <div class="bar">
+    <button id="loadAsyncBtn" class="btn">Load (async/await)</button>
+    <button id="loadThenBtn"  class="btn">Load (.then)</button>
+    <button id="clearBtn"     class="btn ghost">Clear Search</button>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="left">Coin</th>
+        <th>Symbol</th>
+        <th>ID</th>
+        <th class="right">Price (USD)</th>
+        <th class="right">24h %</th>
+        <th class="right">Total Volume</th>
+        <th class="right">Market Cap</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr><td class="center muted" colspan="7">Click a Load button to fetch data…</td></tr>
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
